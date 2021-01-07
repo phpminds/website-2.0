@@ -23,4 +23,13 @@ return function (App $app) {
         $group->get('', ListUsersAction::class);
         $group->get('/{id}', ViewUserAction::class);
     });
+
+// Define named route
+    $app->get('/hello/{name}', function ($request, $response, $args) {
+        return $this->get('view')->render($response, 'home/index.html.twig', [
+            'name' => $args['name'],
+            'version' => '567'
+        ]);
+    })->setName('profile');
+
 };
