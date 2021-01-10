@@ -14,22 +14,13 @@ return function (App $app) {
         return $response;
     });
 
-    $app->get('/', function (Request $request, Response $response) {
-        $response->getBody()->write('Hello world!');
-        return $response;
-    });
+    $app->get('/', function ($request, $response, $args) {
+        return $this->get('view')->render($response, 'home/index.html.twig', [
+        ]);
+    })->setName('home');
 
     $app->group('/users', function (Group $group) {
         $group->get('', ListUsersAction::class);
         $group->get('/{id}', ViewUserAction::class);
     });
-
-// Define named route
-    $app->get('/hello/{name}', function ($request, $response, $args) {
-        return $this->get('view')->render($response, 'home/index.html.twig', [
-            'name' => $args['name'],
-            'version' => '567'
-        ]);
-    })->setName('profile');
-
 };
