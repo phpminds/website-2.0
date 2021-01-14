@@ -50,13 +50,7 @@ class HttpErrorHandler extends SlimErrorHandler
             }
         }
 
-        if (
-            !($exception instanceof HttpException)
-            && ($exception instanceof Exception || $exception instanceof Throwable)
-            && $this->displayErrorDetails
-        ) {
-            $error->setDescription($exception->getMessage());
-        }
+        $this->setErrorDescription($exception, $error);
 
         $payload = new ActionPayload($statusCode, null, $error);
         $encodedPayload = (string) json_encode($payload, JSON_PRETTY_PRINT);
@@ -65,5 +59,16 @@ class HttpErrorHandler extends SlimErrorHandler
         $response->getBody()->write($encodedPayload);
 
         return $response->withHeader('Content-Type', 'application/json');
+    }
+
+    private function setErrorDescription(\Throwable $exception, ActionError $error): void
+    {
+        if ($exception instanceof HttpException) {
+            return;
+        }
+
+        if ($this->displayErrorDetails) {
+            $error->setDescription($exception->getMessage());
+        }
     }
 }
