@@ -16,7 +16,7 @@ Resources:
     Properties:
       PackageType: Image
       Events:
-        HelloWorld:
+        phpminds:
           Type: Api
           Properties:
             Path: /hello
