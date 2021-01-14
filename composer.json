@@ -51,6 +51,6 @@
     "scripts": {
         "start": "php -S localhost:8080 -t public",
         "test": "phpunit",
-        "sa":  "phpstan analyse src --level 7 "
+        "static-analysis":  "phpstan analyse src --level 7 "
     }
 }
