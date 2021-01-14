@@ -27,9 +27,9 @@ class ShutdownHandler
     /**
      * ShutdownHandler constructor.
      *
-     * @param Request       $request
-     * @param $errorHandler $errorHandler
-     * @param bool          $displayErrorDetails
+     * @param Request          $request
+     * @param HttpErrorHandler $errorHandler
+     * @param bool             $displayErrorDetails
      */
     public function __construct(
         Request $request,
@@ -41,7 +41,7 @@ class ShutdownHandler
         $this->displayErrorDetails = $displayErrorDetails;
     }
 
-    public function __invoke()
+    public function __invoke(): void
     {
         $error = error_get_last();
         if ($error) {
