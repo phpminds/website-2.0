@@ -6,67 +6,104 @@
     <title>PHPMiNDS | {% block title %}{% endblock %}</title>
     <link rel="stylesheet" href="/css/styles.css">
 </head>
-<body>
+<body class="bg-bg-green text-white">
+    <nav class="flex-row fixed top-0 md:justify-between  z-10 w-full left-0  shadow-xl ">
+        <div class="flex items-center justify-between px-10 py-3 pr-10">
+            <!-- Header LHS  - Logo-->
+            <div class="flex-shrink-0 " >
+                <img class="h-28" src="/img/phpminds-banner.svg" alt="">
+            </div>
+            <!-- Header Middle + Burger   -->
+            <div class="flex flex-row justify-between" >
+                <a href="#" class="block text-white font-bold px-2 py-1 rounded hover:bg-gray-800 text-right pr-10 hidden lg:block xl:block">Home </a>
+                <a href="#" class="block text-white font-bold px-2 py-1 rounded hover:bg-gray-800 text-right pr-10 hidden sm:block md:block">Upcoming Events </a>
+                <a href="#" class="block text-white font-bold px-2 py-1 rounded hover:bg-gray-800 text-right pr-10 hidden sm:block md:block">Speak for us </a>
+                <a href="#" class="block text-white font-bold px-2 py-1 rounded hover:bg-gray-800 text-right pr-10 hidden sm:block md:block">Previous Events </a>
+                <a href="#" class="block text-white font-bold px-2 py-1 rounded hover:bg-gray-800 text-right pr-10 hidden lg:block xl:block">Contact </a>
+                <a href="#" class="block text-white font-bold px-2 py-1 rounded hover:bg-gray-800 text-right pr-10 hidden lg:block xl:block">Code of Conduct </a>
 
-<div><!-- outer container -->
-    <div class="mx-auto bg-green-700 p-5">
-        <nav class="flex-row md:justify-between">
-            <div class="flex flex-row justify-between">
-                <a href="#">PHPMiNDS</a>
-                <p id="hamburgerbtn" class="md:hidden bg-green-700">
-                    menu
+                <p id="burger-button" class="md:hidden bg-blue-700  ">
+                    <svg class=" h-10 w-10" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"  >
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+                    </svg>
                 </p>
             </div>
-            <ul class="hidden md:flex md:flex-row" id="mobileMenu">
-                <li class="pr-5"><a>Home</a></li>
-                <li class="pr-5"><a>Upcoming Events</a></li>
-                <li class="pr-5"><a>Past Events</a></li>
-                <li class="pr-5"><a>Contact</a></li>
-                <li><a>Code of Conduct</a></li>
-            </ul>
-        </nav>
+        </div>
+        <!-- Drop down menu , under Burger -->
+        <ul id="mobileMenu" class="hidden md:flex md:flex-row pb-10 pl-10 pr-10 items-center justify-center md:w-full  bg-bg-green">
+            <li> <a href="#" class="block text-white font-bold px-2 py-1 rounded hover:bg-gray-800 text-right  pr-10 lg:block">Home </a></li>
+            <li><a href="#" class="block text-white font-bold px-2 py-1 rounded hover:bg-gray-800 text-right pr-10 sm:hidden md:hidden">Upcoming Events </a></li>
+            <li><a href="#" class="block text-white font-bold px-2 py-1 rounded hover:bg-gray-800 text-right pr-10 sm:hidden md:hidden">Speak for uss </a></li>
+            <li><a href="#" class="block text-white font-bold px-2 py-1 rounded hover:bg-gray-800 text-right pr-10 sm:hidden md:hidden">Previous Events </a></li>
+            <li><a href="#" class="block text-white font-bold px-2 py-1 rounded hover:bg-gray-800 text-right pr-10 lg:block">Contact </a></li>
+            <li><a href="#" class="block text-white font-bold px-2 py-1 rounded hover:bg-gray-800 text-right pr-10 lg:block">Code of Conduct </a></li>
+        </ul>
+    </nav>
+
+    <header class="bg-bg-green text-white mt-48" >
+
+        <!-- Images in a row , across the middle -->
+        <div class="flex md:flex-row pb-10 pl-10 pr-10 items-center justify-center " >
+            <img class="transform rotate-12 h-28 " src="https://ca.slack-edge.com/T0A6A07J7-U0A69TW6S-dd32cd67a684-512 " alt="A">
+            <img class="transform rotate-45 h-28" src="https://ca.slack-edge.com/T0A6A07J7-U0AS7QMC3-83fd78040f31-512" alt="S">
+            <img class="transform -rotate-12 h-28" src="https://ca.slack-edge.com/T0A6A07J7-UJTQNCJF6-d6672c305466-512" alt="J">
+            <img class="transform -rotate-45 h-28" src="https://ca.slack-edge.com/T0A6A07J7-U0159HDEKTR-ab7c35a1831f-512" alt="B">
+        </div>
+        <!-- Sentence at bottom of first page  -->
+        <div class="text-black font-bold text-xl pl-10 pr-10">PHP User group meeting every 2nd Thursday of the month</div>
+    </header>
+<main>
+    <h2></h2>
+
+    <div><!-- Banner -->
+
     </div>
 
-    <main>
+    <div><!-- upcoming events -->
 
-        <header>
-            <h2 class="">[ meeting every 2nd Thursday of the month at 6.30pm in Nottingham ]</h2>
-        </header>
+    </div>
 
-        <div><!-- Banner -->
+    <div><!-- past events -->
 
-        </div>
+    </div>
 
-        <div><!-- upcoming events -->
+    <div><!-- sponsors -->
 
-        </div>
+    </div>
+</main>
 
-        <div><!-- past events -->
+<footer><!-- footer nav -->
 
-        </div>
-
-        <div><!-- sponsors -->
-
-        </div>
-    </main>
-
-    <footer><!-- footer nav -->
-
-    </footer>
-</div>
-
-
-{% block body %}
-
-{% endblock %}
+    <ul class="social">
+        <a target="_blank" href="https://twitter.com/balhayre"><i class="fab fa-twitter"></i></a>
+         <a target="_blank" href="https://github.com/Bal2018"><i class="fab fa-github"></i></a>
+         <a target="_blank" href="https://linkedin.com/in/baljinder-hayre-8344296a"><i class="fab fa-linkedin-in"></i></a>
+         <a href="mailto:bk.actions@gmail.com"><i class="fas fa-envelope-open-text"></i></a>
+    </ul>
+    <p>©PHPMinds 2021</p>
+</footer>
 
 <script>
-    let hamburger = document.getElementById('hamburgerbtn');
-    let mobileMenu = document.getElementById('mobileMenu');
 
-    hamburger.addEventListener('click', function(){
-        mobileMenu.classList.toggle('active');
-    });
+        let hamburger = document.getElementById('burger-button');
+        let mobileMenu = document.getElementById('mobileMenu');
+        let notMobile = document.getElementById('notMobileMenu');
+        // let notMobile document.getElementById('notMobileMenu');
+
+        //        const nav = document.querySelector('#nav');
+//         nav.classList.toggle("isOpen");
+
+        hamburger.addEventListener('click', function(){
+            mobileMenu.classList.toggle('active');
+            //notMobile.classList.toggle('notActive');
+        });
+        // hamburger.addEventListener('click', function(){
+        //     mobileMenu.classList.toggle('notActive');
+        //     notMobile.classList.toggle('active');
+        // });
+
+
+
 </script>
-</body>
+
 </html>
