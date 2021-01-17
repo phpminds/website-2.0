@@ -19,6 +19,32 @@ return function (App $app) {
         ]);
     })->setName('home');
 
+    $app->get('/upcoming-events', function ($request, $response, $args) {
+        return $this->get('view')->render($response, 'home/upcoming.html.twig', [
+        ]);
+    })->setName('upcoming-events');
+
+    $app->get('/previous-events', function ($request, $response, $args) {
+        return $this->get('view')->render($response, 'home/previousevents.html.twig', [
+        ]);
+    })->setName('previous-events');
+
+
+    $app->get('/speak-here', function ($request, $response, $args) {
+        return $this->get('view')->render($response, 'home/speakhere.html.twig', [
+        ]);
+    })->setName('speak');
+
+    $app->get('/code-of-conduct', function ($request, $response, $args) {
+        return $this->get('view')->render($response, 'home/codeofconduct.html.twig', [
+        ]);
+    })->setName('code-of-conduct');
+
+    $app->get('/sponsors', function ($request, $response, $args) {
+        return $this->get('view')->render($response, 'home/sponsors.html.twig', [
+        ]);
+    })->setName('sponsors ');
+
     $app->group('/users', function (Group $group) {
         $group->get('', ListUsersAction::class);
         $group->get('/{id}', ViewUserAction::class);

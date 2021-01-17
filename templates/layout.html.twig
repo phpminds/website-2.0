@@ -8,19 +8,22 @@
     <script src="https://kit.fontawesome.com/7f5b3541c5.js" crossorigin="anonymous"></script>
 </head>
 <body class="bg-bg-green text-white">
-    <nav class="flex-row fixed top-0 md:justify-between z-10 w-full left-0 shadow-xl ">
-        <div class="flex items-center justify-between px-10 py-3 pr-10">
+    <nav class="flex-row fixed top-0 md:justify-between z-10 w-full left-0 shadow-xl bg-bg-green ">
+        <div class="flex flex-wrap items-center justify-between px-10 py-3 pr-10  ">
             <!-- Header LHS  - Logo-->
-            <div class="flex-shrink-0 " >
-                <img class="h-28" src="/img/phpminds-banner.svg" alt="PHPMinds logo">
-            </div>
+                <div class="flex-shrink-0 " >
+                    <a href="/">
+                     <img class="h-28" src="/img/phpminds-banner.svg" alt="PHPMinds logo">
+                    </a>
+                </div>
+
             <!-- Header Middle + Burger   -->
             <div class="flex flex-row justify-between " >
-                <a href="#" class="block text-white font-bold px-2 py-1 rounded hover:bg-gray-800 flex justify-center pr-10" aria-label="Tells you about upcoming events here at PHPMinds">Upcoming Events </a>
-                <a href="#" class="block text-white font-bold px-2 py-1 rounded hover:bg-gray-800 text-right pr-10 hidden md:block" aria-label="Sign up for being a speaker here at PHPMinds">Speak for us </a>
-                <a href="#" class="block text-white font-bold px-2 py-1 rounded hover:bg-gray-800 text-right pr-10 hidden lg:block" aria-label="Have a look at all the previous speakers biography  PHPMinds" >Previous Events </a>
-                <a href="#" class="block text-white font-bold px-2 py-1 rounded hover:bg-gray-800 text-right pr-10 hidden xl:block" aria-label="Various ways to contact PHPMinds">Contact </a>
-                <a href="#" class="block text-white font-bold px-2 py-1 rounded hover:bg-gray-800 text-right pr-10 hidden 2xl:block" aria-label="Details about our code of conduct">Code of Conduct </a>
+                <a class="block text-white font-bold px-2 py-1 flex justify-center pr-10" aria-label="Tells you about upcoming events here at PHPMinds">Upcoming Events </a>
+                <a class="block text-white font-bold px-2 py-1 text-right pr-10 hidden md:block" aria-label="Sign up for being a speaker here at PHPMinds">Speak for us </a>
+                <a class="block text-white font-bold px-2 py-1 text-right pr-10 hidden lg:block" aria-label="Have a look at all the previous speakers biography  PHPMinds" >Previous Events </a>
+                <a class="block text-white font-bold px-2 py-1 text-right pr-10 hidden xl:block" aria-label="Various ways to contact PHPMinds">Contact </a>
+                <a class="block text-white font-bold px-2 py-1 text-right pr-10 hidden 2xl:block" aria-label="Details about our code of conduct">Code of Conduct </a>
 
                 <p id="burger-button" class="bg-blue-700 rounded  ">
                     <svg class=" h-10 w-10" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"  alt="Menu to choose options from"  >
@@ -31,75 +34,33 @@
         </div>
         <!-- Drop down menu , under Burger -->
         <ul id="mobileMenu" class="hidden   pb-10 pl-10 pr-10 items-center justify-center   bg-bg-green">
-            <li><a href="#here" class="block text-white font-bold px-2 py-1 rounded hover:bg-gray-800 text-right pr-10 ">Upcoming Events </a></li>
-            <li><a href="#speakers" class="block text-white font-bold px-2 py-1 rounded hover:bg-gray-800 text-right pr-10 ">Speak for uss </a></li>
-            <li><a href="#" class="block text-white font-bold px-2 py-1 rounded hover:bg-gray-800 text-right pr-10 ">Previous Events </a></li>
-            <li><a href="#contacts" class="block text-white font-bold px-2 py-1 rounded hover:bg-gray-800 text-right pr-10 ">Contact </a></li>
-            <li><a href="#" class="block text-white font-bold px-2 py-1 rounded hover:bg-gray-800 text-right pr-10 ">Code of Conduct </a></li>
+            <li><a href="/upcoming-events" class="block text-white font-bold px-2 py-1 rounded hover:bg-gray-800 text-right pr-10 ">Upcoming Events </a></li>
+            <li><a href="/speak-here" class="block text-white font-bold px-2 py-1 rounded hover:bg-gray-800 text-right pr-10 ">Speak for uss </a></li>
+            <li><a href="/previous-events" class="block text-white font-bold px-2 py-1 rounded hover:bg-gray-800 text-right pr-10 ">Previous Events </a></li>
+            <li><a href="/sponsors" class="block text-white font-bold px-2 py-1 rounded hover:bg-gray-800 text-right pr-10 ">Contact </a></li>
+            <li><a href="/code-of-conduct" class="block text-white font-bold px-2 py-1 rounded hover:bg-gray-800 text-right pr-10 ">Code of Conduct </a></li>
+            <li><a href="/sponsors" class="block text-white font-bold px-2 py-1 rounded hover:bg-gray-800 text-right pr-10 ">Sponsors </a></li>
         </ul>
     </nav>
 
     <header class="bg-bg-green text-white mt-48" >
+  </header>
 
-        <!-- Images in a row , across the middle -->
-        <div class="flex md:flex-row pb-10 pl-10 pr-10 items-center justify-center " >
-            <img class="transform rotate-12 h-32 " src="https://ca.slack-edge.com/T0A6A07J7-U0A69TW6S-dd32cd67a684-512 " alt="A">
-            <img class="transform rotate-3 h-28" src="https://ca.slack-edge.com/T0A6A07J7-U0AS7QMC3-83fd78040f31-512" alt="S">
-            <img class="transform -rotate-6 h-20" src="https://ca.slack-edge.com/T0A6A07J7-U0159HDEKTR-ab7c35a1831f-512" alt="B">
-            <img class="transform -rotate-3 h-24" src="https://ca.slack-edge.com/T0A6A07J7-UJTQNCJF6-d6672c305466-512" alt="J">
-        </div>
-        <!-- Sentence at bottom of first page  -->
-        <div class="text-black font-bold text-xl pl-10 pr-10">PHP User group meeting every 2nd Thursday of the month</div>
-    </header>
-</body>
-<main>
-    <h2></h2>
-
-    <div><!-- Banner -->
-
-    </div>
-
-    <div id="here" class="mt-25"><!-- upcoming events -->
-        <h4> Upcoming Events </h4>
-        <div>
-            <img src="" alt="">
-            <div>
-                <h3 class="font-sofia pb-2 border-b border-pink-400 text-big">Something exciting for next month</h3>
-            </div>
-
-        </div>
-
-    </div>
-    <div id="speakers" class="mt-25"><!-- upcoming events -->
-        <h4> Upcoming Events </h4>
-        <div>
-            <img src="" alt="">
-            <div>
-                <h3 class="font-sofia pb-2 border-b border-pink-400 text-big">Speak for us </h3>
-            </div>
-
-        </div>
-
-    </div>
-
-    <div><!-- past events -->
-
-    </div>
-
-    <div><!-- sponsors -->
-
-    </div>
+<main class="pl-5 pr-5 text-justify">
+    {% block body %}{% endblock  %}
 </main>
 
-<footer><!-- footer nav -->
+<footer class="m-3 flex"><!-- footer nav -->
 <div id="contacts">
-    <ul class="social">
-        <a target="_blank" href="https://https://twitter.com/PHPMinds"><i class="fab fa-twitter"></i></a>
-        <a target="_blank" href="https://https://github.com/phpminds"><i class="fab fa-github"></i></a>
+    <ul class="social pb-10  ">
+        <a target="_blank" href="https://twitter.com/phpminds"><i class="fab fa-twitter"></i></a>
+        <a target="_blank" href="https://github.com/phpminds"><i class="fab fa-github"></i></a>
         <a target="_blank" href="https://linkedin.com/groups/8411671"><i class="fab fa-linkedin-in"></i></a>
         <a href="mailto:bal@phpminds.org "><i class="fas fa-envelope-open-text"></i></a>
+        <a href="http://slack.phpminds.org/"><i class="fa fa-slack"> </i></a>
+        <a href="https://www.irccloud.com/#!/ircs://irc.freenode.net:6697/%23phpminds"><i class="fa fa-comment"></i>#freenode</a>
     </ul>
-    <p>©PHPMinds 2021</p>
+    <p class="pb-10  ">©PHPMinds 2021</p>
 </div>
 </footer>
 
@@ -124,5 +85,5 @@
 
 
 </script>
-
+</body>
 </html>
