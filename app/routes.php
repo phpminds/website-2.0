@@ -45,6 +45,11 @@ return function (App $app) {
         ]);
     })->setName('sponsors ');
 
+    $app->get('/contact', function ($request, $response, $args) {
+        return $this->get('view')->render($response, 'home/contact.html.twig', [
+        ]);
+    })->setName('contact ');
+
     $app->group('/users', function (Group $group) {
         $group->get('', ListUsersAction::class);
         $group->get('/{id}', ViewUserAction::class);
