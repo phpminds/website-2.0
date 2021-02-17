@@ -18,9 +18,6 @@ module.exports = {
       fontFamily: {
         'sofia': ['Sofia']
       },
-      maxWidth: {
-        ss: '5rem'
-      }
     }
   },
 
