@@ -7,13 +7,13 @@
     <link rel="stylesheet" href="/css/styles.css">
     <script src="https://kit.fontawesome.com/7f5b3541c5.js" crossorigin="anonymous"></script>
 </head>
-<body class="bg-bg-green text-white">
+<body class="bg-bg-green text-white min-h-screen pt-48 relative pb-20">
     <nav class="flex-row fixed top-0 md:justify-between z-10 w-full left-0 shadow-xl bg-bg-green ">
         <div class="flex flex-wrap items-center justify-between px-10 py-3 pr-10  ">
             <!-- Header LHS  - Logo-->
                 <div class="flex-shrink-0 " >
                     <a href="/">
-                     <img class="h-28" src="/img/phpminds-banner.svg" alt="PHPMinds logo">
+                     <img class="h-28" src="/img/phpminds-banner.svg/" alt="PHPMinds usergroup logo">
                     </a>
                 </div>
 
@@ -33,7 +33,7 @@
             </div>
         </div>
         <!-- Drop down menu , under Burger -->
-        <ul id="mobileMenu" class="hidden   pb-10 pl-10 pr-10 items-center justify-center   bg-bg-green">
+        <ul id="mobileMenu" class="hidden   pb-10 pl-10 pr-10 items-center justify-center bg-bg-green">
             <li><a href="/upcoming-events" class="block text-white font-bold px-2 py-1 rounded hover:bg-gray-800 text-right pr-10 ">Upcoming Events </a></li>
             <li><a href="/speak-here" class="block text-white font-bold px-2 py-1 rounded hover:bg-gray-800 text-right pr-10 ">Speak for uss </a></li>
             <li><a href="/previous-events" class="block text-white font-bold px-2 py-1 rounded hover:bg-gray-800 text-right pr-10 ">Previous Events </a></li>
@@ -42,26 +42,23 @@
             <li><a href="/sponsors" class="block text-white font-bold px-2 py-1 rounded hover:bg-gray-800 text-right pr-10 ">Sponsors </a></li>
         </ul>
     </nav>
+{#    <header class="bg-bg-green text-white mt-48 display:inline-block"></header>#}
 
-    <header class="bg-bg-green text-white mt-48" >
-  </header>
-
-<main class="pl-5 pr-5 text-justify">
+<main class="pl-5 pr-5 text-justify mb-auto">
     {% block body %}{% endblock  %}
 </main>
 
-<footer class="m-3 flex"><!-- footer nav -->
+<footer class="m-3 flex absolute bottom-0" ><!-- footer nav -->
 <div id="contacts">
     <p class="mb-20">
-        <ul class="social pb-10  ">
+        <ul class="social ">
             <a target="_blank" href="https://twitter.com/phpminds"><i class="fab fa-twitter-square fa-2x mx-1 text-black-500 hover:text-orange-500 cursor-pointer"></i></a>
-            <a target="_blank" href="https://github.com/phpminds"><i class="fab fa-github-square fa-2x mx-1 text-black-500 hover:text-orange-500 cursor-pointer"></i></a>
             <a target="_blank" href="https://linkedin.com/groups/8411671"><i class="fab fa-linkedin-in fa-2x mx-1 text-black-500 hover:text-orange-500 cursor-pointer"></i></a>
             <a href="mailto:bal@phpminds.org "><i class="fas fa-envelope-open-text fa-2x mx-1 text-black-500 hover:text-orange-500 cursor-pointer"></i></a>
             <a href="http://slack.phpminds.org/"><i class="fa fa-slack fa-2x mx-1 text-black-500 hover:text-orange-500 cursor-pointer"> </i></a>
-            <a href="https://www.irccloud.com/#!/ircs://irc.freenode.net:6697/%23phpminds"><i class="fa fa-comment fa-2x mx-1 text-black-500 hover:text-orange-500 cursor-pointer"></i>#freenode</a>
+            <a href="https://www.irccloud.com/#!/ircs://irc.freenode.net:6697/%23phpminds"><i class="fa fa-comment fa-2x mx-1 text-black-500 hover:text-orange-500 cursor-pointer"></i> </a>
         </ul>
-        <p>©PHPMinds 2021</p>
+        <p mb-5>©PHPMinds 2021</p>
     </p>
 </div>
 </footer>
