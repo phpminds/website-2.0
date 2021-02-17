@@ -8,7 +8,7 @@
     <script src="https://kit.fontawesome.com/7f5b3541c5.js" crossorigin="anonymous"></script>
 </head>
 <body class="bg-bg-green text-white min-h-screen pt-48 relative pb-20">
-    <nav class="flex-row fixed top-0 md:justify-between z-10 w-full left-0 shadow-xl bg-bg-green ">
+    <nav class="flex-row fixed top-0 md:justify-between z-50 w-full left-0 shadow-xl bg-bg-green ">
         <div class="flex flex-wrap items-center justify-between px-10 py-3 pr-10  ">
             <!-- Header LHS  - Logo-->
                 <div class="flex-shrink-0 " >
@@ -25,7 +25,7 @@
                 <a class="block text-white font-bold px-2 py-1 text-right pr-10 hidden xl:block" aria-label="Various ways to contact PHPMinds">Contact </a>
                 <a class="block text-white font-bold px-2 py-1 text-right pr-10 hidden 2xl:block" aria-label="Details about our code of conduct">Code of Conduct </a>
 
-                <p id="burger-button" class="bg-blue-700 rounded  ">
+                <p id="burger-button" class="bg-blue-700 rounded ">
                     <svg class=" h-10 w-10" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"  alt="Menu to choose options from"  >
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
                     </svg>
@@ -33,13 +33,13 @@
             </div>
         </div>
         <!-- Drop down menu , under Burger -->
-        <ul id="mobileMenu" class="hidden   pb-10 pl-10 pr-10 items-center justify-center bg-bg-green">
-            <li><a href="/upcoming-events" class="block text-white font-bold px-2 py-1 rounded hover:bg-gray-800 text-right pr-10 ">Upcoming Events </a></li>
-            <li><a href="/speak-here" class="block text-white font-bold px-2 py-1 rounded hover:bg-gray-800 text-right pr-10 ">Speak for uss </a></li>
-            <li><a href="/previous-events" class="block text-white font-bold px-2 py-1 rounded hover:bg-gray-800 text-right pr-10 ">Previous Events </a></li>
-            <li><a href="/contact" class="block text-white font-bold px-2 py-1 rounded hover:bg-gray-800 text-right pr-10 ">Contact </a></li>
-            <li><a href="/code-of-conduct" class="block text-white font-bold px-2 py-1 rounded hover:bg-gray-800 text-right pr-10 ">Code of Conduct </a></li>
-            <li><a href="/sponsors" class="block text-white font-bold px-2 py-1 rounded hover:bg-gray-800 text-right pr-10 ">Sponsors </a></li>
+        <ul id="mobileMenu" class="hidden   pb-10 pl-10 pr-10 items-center justify-center bg-bg-green md:items-end flex flex-col">
+            <li class="max-w-full md:max-w-small w-full"><a href="/upcoming-events"  class="block text-white font-bold px-2 py-4 rounded hover:bg-gray-800 text-right pr-10 ">Upcoming Events </a></li>
+            <li class="max-w-full md:max-w-small w-full"><a href="/speak-here"       class="block text-white font-bold px-2 py-4 rounded hover:bg-gray-800 text-right pr-10 ">Speak for uss </a></li>
+            <li class="max-w-full md:max-w-small w-full"><a href="/previous-events"  class="block text-white font-bold px-2 py-4 rounded hover:bg-gray-800 text-right pr-10 ">Previous Events </a></li>
+            <li class="max-w-full md:max-w-small w-full"><a href="/contact"          class="block text-white font-bold px-2 py-4 rounded hover:bg-gray-800 text-right pr-10 ">Contact </a></li>
+            <li class="max-w-full md:max-w-small w-full"><a href="/code-of-conduct"  class="block text-white font-bold px-2 py-4 rounded hover:bg-gray-800 text-right pr-10 ">Code of Conduct </a></li>
+            <li class="max-w-full md:max-w-small w-full"><a href="/sponsors"         class="block text-white font-bold px-2 py-4 rounded hover:bg-gray-800 text-right pr-10 ">Sponsors </a></li>
         </ul>
     </nav>
 {#    <header class="bg-bg-green text-white mt-48 display:inline-block"></header>#}
@@ -74,7 +74,7 @@
 //         nav.classList.toggle("isOpen");
 
         hamburger.addEventListener('click', function(){
-            mobileMenu.classList.toggle('active');
+            mobileMenu.classList.toggle('nav-active');
         });
         // hamburger.addEventListener('click', function(){
         //     mobileMenu.classList.toggle('notActive');

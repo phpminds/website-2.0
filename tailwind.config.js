@@ -4,6 +4,12 @@ module.exports = {
   purge: [],
   darkMode: false, // or 'media' or 'class'
   theme: {
+    minWidth: {
+      '250': '250px'
+    },
+    maxWidth:{
+      'small':'320px'
+    },
     extend: {
       alignItems: ['hover', 'focus'],
       transformOrigin: {
