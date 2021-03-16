@@ -5,3 +5,6 @@
 /logs/*
 !/logs/README.md
 .phpunit.result.cache
+.serverless 
+node_modules
+
