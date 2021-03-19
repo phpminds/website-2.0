@@ -22,8 +22,12 @@ module.exports = {
         'bg-green': '#6AA84F'
       },
       fontFamily: {
-        'sofia': ['Sofia']
+        'lato': ['Lato'],
+        'Montserrat': ['Montserrat']
       },
+      variants: {
+        animation: ['responsive', 'motion-safe', 'motion-reduce', 'hover','focus']
+      }
     }
   },
 

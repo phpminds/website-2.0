@@ -7,23 +7,25 @@
     <link rel="stylesheet" href="/css/styles.css">
     <script src="https://kit.fontawesome.com/7f5b3541c5.js" crossorigin="anonymous"></script>
 </head>
+
 <body class="bg-bg-green text-white min-h-screen pt-48 relative pb-20">
     <nav class="flex-row fixed top-0 md:justify-between z-50 w-full left-0 shadow-xl bg-bg-green ">
         <div class="flex flex-wrap items-center justify-between px-10 py-3 pr-10  ">
             <!-- Header LHS  - Logo-->
                 <div class="flex-shrink-0 " >
                     <a href="/">
-                     <img class="h-28" src="/img/phpminds-banner.svg/" alt="PHPMinds usergroup logo">
+                     <img class="h-32  transform hover:scale-110 motion-reduce:transform-none " src="/img/phpminds-banner.svg/" alt="PHPMinds usergroup logo">
                     </a>
                 </div>
 
             <!-- Header Middle + Burger   -->
-            <div class="flex flex-row justify-between " >
-                <a class="block text-white font-bold px-2 py-1 flex justify-center pr-10" aria-label="Tells you about upcoming events here at PHPMinds">Upcoming Events </a>
-                <a class="block text-white font-bold px-2 py-1 text-right pr-10 hidden md:block" aria-label="Sign up for being a speaker here at PHPMinds">Speak for us </a>
-                <a class="block text-white font-bold px-2 py-1 text-right pr-10 hidden lg:block" aria-label="Have a look at all the previous speakers biography  PHPMinds" >Previous Events </a>
-                <a class="block text-white font-bold px-2 py-1 text-right pr-10 hidden xl:block" aria-label="Various ways to contact PHPMinds">Contact </a>
-                <a class="block text-white font-bold px-2 py-1 text-right pr-10 hidden 2xl:block" aria-label="Details about our code of conduct">Code of Conduct </a>
+            <div class="flex flex-row  justify-between " >
+                <a href="/upcoming-events"  class=" hover:text-blue-700 md:block lg:hidden text-white font-bold px-2 py-1 flex justify-center pr-10 " aria-label="Tells you about upcoming events here at PHPMinds">Upcoming Events </a>
+                <a href="/speak-here"       class=" hover:text-blue-700 md:block lg:hidden text-white font-bold px-2 py-1 text-right pr-10  "        aria-label="Sign up for being a speaker here at PHPMinds">Speak for us </a>
+                <a href="/previous-events"  class=" hover:text-blue-700 lg:block xl:hidden text-white font-bold px-2 py-1 text-right pr-10  "        aria-label="Have a look at all the previous speakers biography  PHPMinds" >Previous Events </a>
+                <a href="/contact"          class=" hover:text-blue-700 xl:block xl:hidden text-white font-bold px-2 py-1 text-right pr-10  "        aria-label="Various ways to contact PHPMinds">Contact </a>
+                <a href="/code-of-conduct"  class=" hover:text-blue-700 xl:block xl:hidden text-white font-bold px-2 py-1 text-right pr-10  "        aria-label="Details about our code of conduct">Code of Conduct </a>
+{#                <a href="/sponsors"         class="hidden xl:block 2xl:hidden text-white font-bold px-2 py-1 text-right pr-10  "        aria-label="All you need to know about our sponsors">Sponsors </a>#}
 
                 <p id="burger-button" class="bg-blue-700 rounded ">
                     <svg class=" h-10 w-10" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"  alt="Menu to choose options from"  >
@@ -71,7 +73,7 @@
         // let notMobile document.getElementById('notMobileMenu');
 
         //        const nav = document.querySelector('#nav');
-//         nav.classList.toggle("isOpen");
+        //         nav.classList.toggle("isOpen");
 
         hamburger.addEventListener('click', function(){
             mobileMenu.classList.toggle('nav-active');
