@@ -42,9 +42,13 @@
                     </label>
                 </div>
                 <div>
-                    <label class="block mb-1 font-bold text-grey-500">Upload an image of speaker</label>
                     <label>
                         <input type="image" alt="Choose an image to upload to be used for your talk">
+                        <div class="relative h-40 rounded-lg border-dashed border-2 border-gray-200 bg-white flex justify-center items-center hover:cursor-pointer">
+                            <div class="absolute">
+                                <div class="flex flex-col items-center "> <i class="fa fa-cloud-upload fa-3x text-gray-200"></i> <span class="block text-gray-400 font-normal">Attach you files here</span> <span class="block text-gray-400 font-normal">or</span> <span class="block text-blue-400 font-normal">Browse files</span> </div>
+                            </div> <input type="file" class="h-full w-full opacity-0" name="">
+                        </div>
                     </label>
                 </div>
                 <div>
@@ -63,5 +67,18 @@
             </form>
         </div>
     </div>
+
+{#    <script>#}
+{#        document.addEventListener("DOMContentLoaded", function(event) {#}
+{#            const input = document.querySelector("form input"),#}
+{#                counter = document.querySelector("form .counter"),#}
+{#                maxLength = input.getAttribute("maxlength");#}
+
+{#            input.onkeyup = ()=>{#}
+{#                counter.innerText = maxLength - input.value.length;#}
+{#            }#}
+
+{#        });#}
+{#    </script>#}
 
 {% endblock %}
