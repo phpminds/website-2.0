@@ -1,10 +1,9 @@
 {% extends "layout.html.twig" %}
 
 {% block body %}
-    <div id="speakers" ><!-- Speak for us-->
+    <div id="speakersform" ><!-- Speak for us-->
         <div>
-            <h3 class="font-Montserrat pb-2 border-b border-pink-400 text-big">Speakers for us</h3>
-            <p class="font-Lato">We are always on the look out for speakers - and welcome talk submissions from all regardless
+            <p class="font-Lato pb-10">We are always on the look out for speakers - and welcome talk submissions from all regardless
                 of previous experience.
                 Concerned that your 'not the expert', no worries, you'd be surprised I am sure at what you know
                 and the benefit you can bring from sharing your experiences with others.
@@ -13,5 +12,56 @@
                 also welcome tutorial and workshop style ideas.
             </p>
         </div>
-</div>
+
+        <div class=" bg-white p-16 rounded shadow-2xl w-2/3 font-Montserrat text-black  ">
+            <h2 class="text-3xl font-bold mb-10 pb-2  ">Fill in a form for Speaking </h2>
+
+            <form class="font-Lato space-y-5  ">
+                <div>
+                    <label class="block mb-1 font-bold text-grey-500">Name</label>
+                    <label>
+                        <input type="text" class="w-full border-2 border-grey-400 p-3  rounded  outline-none focus:border-blue-300">
+                    </label>
+                </div>
+                <div>
+                    <label class="block mb-1 font-bold text-grey-500">Email</label>
+                    <label>
+                        <input type="email" class="w-full border-2 border-grey-400 p-3  rounded  outline-none focus:border-blue-300">
+                    </label>
+                </div>
+                <div>
+                    <label class="block mb-1 font-bold text-grey-500">Proposed title of talk</label>
+                    <label>
+                        <input type="text" class="w-full border-2 border-grey-400 p-3  rounded  outline-none focus:border-blue-300">
+                    </label>
+                </div>
+                <div>
+                    <label class="block mb-1 font-bold text-grey-500">Brief outline of talk</label>
+                    <label>
+                        <input type="text" class="w-full border-2 border-grey-400 p-3  rounded  outline-none focus:border-blue-300">
+                    </label>
+                </div>
+                <div>
+                    <label class="block mb-1 font-bold text-grey-500">Upload an image of speaker</label>
+                    <label>
+                        <input type="image" alt="Choose an image to upload to be used for your talk">
+                    </label>
+                </div>
+                <div>
+                    <label class="block mb-1 font-bold text-grey-500">Bio of the speaker</label>
+                    <label>
+                        <input type="text" class="w-full border-2 border-grey-400 p-3  rounded  outline-none focus:border-blue-300">
+                    </label>
+                </div>
+                <div>
+                    <label>
+                        <input type="checkbox" id="agree">
+                    </label>
+                    <label for="agree" class="ml-2 text-sm text-gray-700">I agree to terms and conditions ....</label>
+                </div>
+                <button class="block w-full bg-bg-green hover:bg-green-600 p-4 rounded">Submit</button>
+            </form>
+        </div>
+    </div>
+
 {% endblock %}
