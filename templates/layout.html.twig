@@ -20,28 +20,28 @@
 
             <!-- Header Middle + Burger   -->
             <div class="flex flex-row  justify-between " >
-                <a href="/upcoming-events"  class=" hover:text-blue-700 md:block lg:hidden text-white font-bold px-2 py-1 flex justify-center pr-10 " aria-label="Tells you about upcoming events here at PHPMinds">Upcoming Events </a>
-                <a href="/speak-here"       class=" hover:text-blue-700 md:block lg:hidden text-white font-bold px-2 py-1 text-right pr-10  "        aria-label="Sign up for being a speaker here at PHPMinds">Speak for us </a>
-                <a href="/previous-events"  class=" hover:text-blue-700 lg:block xl:hidden text-white font-bold px-2 py-1 text-right pr-10  "        aria-label="Have a look at all the previous speakers biography  PHPMinds" >Previous Events </a>
-                <a href="/contact"          class=" hover:text-blue-700 xl:block xl:hidden text-white font-bold px-2 py-1 text-right pr-10  "        aria-label="Various ways to contact PHPMinds">Contact </a>
-                <a href="/code-of-conduct"  class=" hover:text-blue-700 xl:block xl:hidden text-white font-bold px-2 py-1 text-right pr-10  "        aria-label="Details about our code of conduct">Code of Conduct </a>
-{#                <a href="/sponsors"         class="hidden xl:block 2xl:hidden text-white font-bold px-2 py-1 text-right pr-10  "        aria-label="All you need to know about our sponsors">Sponsors </a>#}
+                <a href="/upcoming-events"  class=" hover:text-blue-700 sm:hidden md:block  text-white font-bold px-2 py-1 flex text-right pr-10  " aria-label="Tells you about upcoming events here at PHPMinds">Upcoming Events </a>
+                <a href="/speak-here"       class=" hover:text-blue-700 sm:hidden md:block  text-white font-bold px-2 py-1 flex text-right pr-10  " aria-label="Sign up for being a speaker here at PHPMinds">Speak for us </a>
+                <a href="/previous-events"  class=" hover:text-blue-700 sm:hidden lg:block  text-white font-bold px-2 py-1 flex text-right pr-10  " aria-label="Have a look at all the previous speakers biography  PHPMinds" >Previous Events </a>
+                <a href="/contact"          class=" hover:text-blue-700 sm:hidden xl:block  text-white font-bold px-2 py-1 flex text-right pr-10  " aria-label="Various ways to contact PHPMinds">Contact </a>
+                <a href="/code-of-conduct"  class=" hover:text-blue-700 sm:hidden xl:block  text-white font-bold px-2 py-1 flex text-right pr-10  " aria-label="Details about our code of conduct">Code of Conduct </a>
+                <a href="/sponsors"         class=" hover:text-blue-700 sm:hidden 2xl:block text-white font-bold px-2 py-1 flex text-right pr-10  "  aria-label="All you need to know about our sponsors">Sponsors </a>
 
                 <p id="burger-button" class="bg-blue-700 rounded ">
-                    <svg class=" h-10 w-10" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"  alt="Menu to choose options from"  >
+                    <svg class=" h-10 w-10 2xl:hidden  " xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"  alt="Menu to choose options from"  >
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
                     </svg>
                 </p>
             </div>
         </div>
         <!-- Drop down menu , under Burger -->
-        <ul id="mobileMenu" class="hidden pb-10 pl-10 pr-10 items-center justify-center bg-bg-green md:items-end flex flex-col">
-            <li class="max-w-full md:max-w-small w-full"><a href="/upcoming-events"  class="block text-white font-bold px-2 py-4 rounded hover:bg-gray-800 text-right pr-10 ">Upcoming Events </a></li>
-            <li class="max-w-full md:max-w-small w-full"><a href="/speak-here"       class="block text-white font-bold px-2 py-4 rounded hover:bg-gray-800 text-right pr-10 ">Speak for uss </a></li>
-            <li class="max-w-full md:max-w-small w-full"><a href="/previous-events"  class="block text-white font-bold px-2 py-4 rounded hover:bg-gray-800 text-right pr-10 ">Previous Events </a></li>
-            <li class="max-w-full md:max-w-small w-full"><a href="/contact"          class="block text-white font-bold px-2 py-4 rounded hover:bg-gray-800 text-right pr-10 ">Contact </a></li>
-            <li class="max-w-full md:max-w-small w-full"><a href="/code-of-conduct"  class="block text-white font-bold px-2 py-4 rounded hover:bg-gray-800 text-right pr-10 ">Code of Conduct </a></li>
-            <li class="max-w-full md:max-w-small w-full"><a href="/sponsors"         class="block text-white font-bold px-2 py-4 rounded hover:bg-gray-800 text-right pr-10 ">Sponsors </a></li>
+        <ul id="mobileMenu" class="hidden pb-10 pl-10 pr-10 items-center justify-center bg-bg-green md:items-end flex flex-col bg-opacity-0">
+            <li class="max-w-full md:max-w-small w-full"><a href="/upcoming-events"  class="sm:block md:hidden text-white font-bold px-2 py-4 rounded hover:bg-gray-800 text-right pr-10 ">Upcoming Events </a></li>
+            <li class="max-w-full md:max-w-small w-full"><a href="/speak-here"       class="sm:block md:hidden text-white font-bold px-2 py-4 rounded hover:bg-gray-800 text-right pr-10 ">Speak for uss </a></li>
+            <li class="max-w-full md:max-w-small w-full"><a href="/previous-events"  class="sm:block lg:hidden text-white font-bold px-2 py-4 rounded hover:bg-gray-800 text-right pr-10 ">Previous Events </a></li>
+            <li class="max-w-full md:max-w-small w-full"><a href="/contact"          class="sm:block xl:hidden text-white font-bold px-2 py-4 rounded hover:bg-gray-800 text-right pr-10 ">Contact </a></li>
+            <li class="max-w-full md:max-w-small w-full"><a href="/code-of-conduct"  class="sm:block xl:hidden text-white font-bold px-2 py-4 rounded hover:bg-gray-800 text-right pr-10 ">Code of Conduct </a></li>
+            <li class="max-w-full md:max-w-small w-full"><a href="/sponsors"         class="sm:block 2xl:hidden text-white font-bold px-2 py-4 rounded hover:bg-gray-800 text-right pr-10 ">Sponsors </a></li>
         </ul>
     </nav>
 {#    <header class="bg-bg-green text-white mt-48 display:inline-block"></header>#}
