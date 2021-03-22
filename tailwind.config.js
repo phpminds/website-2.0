@@ -27,6 +27,10 @@ module.exports = {
       },
       variants: {
         animation: ['responsive', 'motion-safe', 'motion-reduce', 'hover','focus']
+      },
+      backdropFilter: { // defaults to {}
+        'none': 'none',
+        'blur': 'blur(20px)',
       }
     }
   },
