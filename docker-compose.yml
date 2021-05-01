@@ -1,0 +1,22 @@
+version: '3.7'
+
+volumes:
+    logs:
+        driver: local
+
+services:
+    web:
+        image: bref/fpm-dev-gateway
+        ports:
+            - '8000:80'
+        volumes:
+            - .:/var/task
+        links:
+            - php
+        environment:
+            HANDLER: public/index.php
+            DOCUMENT_ROOT: public
+    php:
+        image: bref/php-80-fpm-dev
+        volumes:
+            - .:/var/task:ro
