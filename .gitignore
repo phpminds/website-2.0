@@ -7,4 +7,5 @@
 .phpunit.result.cache
 .serverless 
 node_modules
-
+/node_modules/
+public/css/
