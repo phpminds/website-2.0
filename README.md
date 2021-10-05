@@ -5,8 +5,13 @@ Built on the Slim framework, bref and deployed to AWS Lambda
 
 requires
 ```bash
-Docker , AWS CLI , AWS-SAM
+Docker, AWS CLI , Serverless, Nodejs 14+ 
 ```
+
+###Installation
+
+```npm install -g serverless```
+
 
 To run the application in development, you can run these commands from the root directory
 
@@ -25,5 +30,9 @@ Run this command in the application directory to run the test suite
 ```bash
 composer test
 ```
+
+###to deploy 
+
+```serverless deploy --aws-profile <your profile> ```
 
 That's it for now! 
