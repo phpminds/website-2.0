@@ -5,7 +5,6 @@ namespace App\Application\Handlers;
 
 use App\Application\Actions\ActionError;
 use App\Application\Actions\ActionPayload;
-use Exception;
 use Psr\Http\Message\ResponseInterface as Response;
 use Slim\Exception\HttpBadRequestException;
 use Slim\Exception\HttpException;
@@ -15,7 +14,7 @@ use Slim\Exception\HttpNotFoundException;
 use Slim\Exception\HttpNotImplementedException;
 use Slim\Exception\HttpUnauthorizedException;
 use Slim\Handlers\ErrorHandler as SlimErrorHandler;
-use Throwable;
+
 
 class HttpErrorHandler extends SlimErrorHandler
 {
@@ -50,20 +49,25 @@ class HttpErrorHandler extends SlimErrorHandler
             }
         }
 
-        if (
-            !($exception instanceof HttpException)
-            && ($exception instanceof Exception || $exception instanceof Throwable)
-            && $this->displayErrorDetails
-        ) {
-            $error->setDescription($exception->getMessage());
-        }
+        $this->setErrorDescription($exception, $error);
 
         $payload = new ActionPayload($statusCode, null, $error);
-        $encodedPayload = json_encode($payload, JSON_PRETTY_PRINT);
+        $encodedPayload = (string) json_encode($payload, JSON_PRETTY_PRINT);
 
         $response = $this->responseFactory->createResponse($statusCode);
         $response->getBody()->write($encodedPayload);
 
         return $response->withHeader('Content-Type', 'application/json');
+    }
+
+    private function setErrorDescription(\Throwable $exception, ActionError $error): void
+    {
+        if ($exception instanceof HttpException) {
+            return;
+        }
+
+        if ($this->displayErrorDetails) {
+            $error->setDescription($exception->getMessage());
+        }
     }
 }
