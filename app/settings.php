@@ -14,6 +14,9 @@ return function (ContainerBuilder $containerBuilder) {
                 'path' => isset($_ENV['docker']) ? 'php://stdout' : __DIR__ . '/../logs/app.log',
                 'level' => Logger::DEBUG,
             ],
+            'twig' => [
+                'baseUrl' => 'https://phpminds-assets.s3.eu-west-1.amazonaws.com/public',
+            ],
         ],
     ]);
 };

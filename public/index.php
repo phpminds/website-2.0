@@ -25,6 +25,8 @@ if (false) { // Should be set to true in production
 $settings = require __DIR__ . '/../app/settings.php';
 $settings($containerBuilder);
 
+
+
 // Set up dependencies
 $dependencies = require __DIR__ . '/../app/dependencies.php';
 $dependencies($containerBuilder);
@@ -34,11 +36,14 @@ $repositories = require __DIR__ . '/../app/repositories.php';
 $repositories($containerBuilder);
 
 // Build PHP-DI Container instance
+/** @var \DI\Container $container */
 $container = $containerBuilder->build();
 // Set view in Container
 $container->set('view', function() {
-    return Twig::create(__DIR__ . '/../templates', ['cache' => false ]);
-//    return Twig::create(__DIR__ . '/../templates', ['cache' => __DIR__ . '/../var/cache']);
+    $twig = Twig::create(__DIR__ . '/../templates', ['cache' => false]);
+    $twig->getEnvironment()->addGlobal('baseUrl', 'https://phpminds-assets.s3.eu-west-1.amazonaws.com/public');
+
+    return $twig;
 });
 
 // Instantiate the app
