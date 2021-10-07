@@ -54,4 +54,12 @@ return function (App $app) {
         $group->get('', ListUsersAction::class);
         $group->get('/{id}', ViewUserAction::class);
     });
+
+    $app->get('/assets', function ($request, $response, $args) {
+
+        $newResponse = $response->withHeader('Content-type', 'application/json');
+
+        $newStream = new \GuzzleHttp\Psr7\LazyOpenStream('/path/to/file', 'r');
+        return $newResponse->withBody($newStream);
+    })->setName('assets ');
 };
