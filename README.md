@@ -35,4 +35,7 @@ composer test
 
 ```serverless deploy --aws-profile <your profile> ```
 
+Deploy to S3 separately
+`aws s3 sync public s3://<bucket-name>/<public-folder> --delete`
+
 That's it for now! 
