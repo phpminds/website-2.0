@@ -24,6 +24,7 @@
     "require": {
         "php": "^7.2|^8.0",
         "ext-json": "*",
+        "bref/bref": "^1.3",
         "monolog/monolog": "^2.0",
         "php-di/php-di": "^6.1",
         "slim/psr7": "^1.1",
@@ -31,6 +32,7 @@
         "slim/twig-view": "^3.0"
     },
     "require-dev": {
+        "phpspec/prophecy-phpunit": "^2.0",
         "phpstan/phpstan": "^0.12.67",
         "phpunit/phpunit": "^9"
     },
@@ -49,7 +51,7 @@
         }
     },
     "scripts": {
-        "start": "php -S localhost:8080 -t public",
+        "start": "docker compose up",
         "test": "phpunit",
         "static-analysis":  "phpstan analyse src --level 7 "
     }

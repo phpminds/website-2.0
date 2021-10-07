@@ -4,11 +4,13 @@ declare(strict_types=1);
 use App\Application\Handlers\HttpErrorHandler;
 use App\Application\Handlers\ShutdownHandler;
 use App\Application\ResponseEmitter\ResponseEmitter;
+use Bref\Context\Context;
 use DI\ContainerBuilder;
 use Slim\Factory\AppFactory;
 use Slim\Factory\ServerRequestCreatorFactory;
 use Slim\Views\Twig;
 use Slim\Views\TwigMiddleware;
+use Bref\Bridge\Slim\SlimAdapter;
 
 require __DIR__ . '/../vendor/autoload.php';
 
@@ -35,7 +37,8 @@ $repositories($containerBuilder);
 $container = $containerBuilder->build();
 // Set view in Container
 $container->set('view', function() {
-    return Twig::create(__DIR__ . '/../templates', ['cache' => __DIR__ . '/../var/cache']);
+    return Twig::create(__DIR__ . '/../templates', ['cache' => false ]);
+//    return Twig::create(__DIR__ . '/../templates', ['cache' => __DIR__ . '/../var/cache']);
 });
 
 // Instantiate the app
@@ -76,7 +79,7 @@ $app->addRoutingMiddleware();
 $errorMiddleware = $app->addErrorMiddleware($displayErrorDetails, false, false);
 $errorMiddleware->setDefaultErrorHandler($errorHandler);
 
-// Run App & Emit Response
-$response = $app->handle($request);
-$responseEmitter = new ResponseEmitter();
-$responseEmitter->emit($response);
+$app->run();
+
+
+
