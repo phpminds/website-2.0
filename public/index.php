@@ -5,6 +5,7 @@ use App\Application\Handlers\HttpErrorHandler;
 use App\Application\Handlers\ShutdownHandler;
 use App\Application\ResponseEmitter\ResponseEmitter;
 use Bref\Context\Context;
+use DI\Container;
 use DI\ContainerBuilder;
 use Slim\Factory\AppFactory;
 use Slim\Factory\ServerRequestCreatorFactory;
@@ -34,11 +35,15 @@ $repositories = require __DIR__ . '/../app/repositories.php';
 $repositories($containerBuilder);
 
 // Build PHP-DI Container instance
+/** @var \DI\Container $container */
 $container = $containerBuilder->build();
 // Set view in Container
-$container->set('view', function() {
-    return Twig::create(__DIR__ . '/../templates', ['cache' => false ]);
-//    return Twig::create(__DIR__ . '/../templates', ['cache' => __DIR__ . '/../var/cache']);
+$container->set('view', function(Container $container) {
+    $twigSettings = $container->get('settings')['twig'];
+    $twig = Twig::create(__DIR__ . '/../templates', ['cache' => false]);
+    $twig->getEnvironment()->addGlobal('baseUrl', $twigSettings['baseUrl']);
+
+    return $twig;
 });
 
 // Instantiate the app
