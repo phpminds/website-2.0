@@ -5,6 +5,7 @@ use App\Application\Handlers\HttpErrorHandler;
 use App\Application\Handlers\ShutdownHandler;
 use App\Application\ResponseEmitter\ResponseEmitter;
 use Bref\Context\Context;
+use DI\Container;
 use DI\ContainerBuilder;
 use Slim\Factory\AppFactory;
 use Slim\Factory\ServerRequestCreatorFactory;
@@ -25,8 +26,6 @@ if (false) { // Should be set to true in production
 $settings = require __DIR__ . '/../app/settings.php';
 $settings($containerBuilder);
 
-
-
 // Set up dependencies
 $dependencies = require __DIR__ . '/../app/dependencies.php';
 $dependencies($containerBuilder);
@@ -39,9 +38,10 @@ $repositories($containerBuilder);
 /** @var \DI\Container $container */
 $container = $containerBuilder->build();
 // Set view in Container
-$container->set('view', function() {
+$container->set('view', function(Container $container) {
+    $twigSettings = $container->get('settings')['twig'];
     $twig = Twig::create(__DIR__ . '/../templates', ['cache' => false]);
-    $twig->getEnvironment()->addGlobal('baseUrl', 'https://phpminds-assets.s3.eu-west-1.amazonaws.com/public');
+    $twig->getEnvironment()->addGlobal('baseUrl', $twigSettings['baseUrl']);
 
     return $twig;
 });
