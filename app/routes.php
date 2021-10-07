@@ -57,9 +57,9 @@ return function (App $app) {
 
     $app->get('/assets', function ($request, $response, $args) {
 
-        $newResponse = $response->withHeader('Content-type', 'application/json');
+        $newResponse = $response->withHeader('Content-type', 'text/css');
 
-        $newStream = new \GuzzleHttp\Psr7\LazyOpenStream('/path/to/file', 'r');
+        $newStream = new \GuzzleHttp\Psr7\LazyOpenStream((dirname(__DIR__, 1).'/public/css/styles.css'), 'r');
         return $newResponse->withBody($newStream);
-    })->setName('assets ');
+    })->setName('assets');
 };
